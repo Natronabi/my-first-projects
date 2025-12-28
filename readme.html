@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+
+    <title>Başlarken</title>
+  </head>
+
+<body>
+
+    <div class="container">
+        <div id="header">
+            <h1>Başlarken</h1>
+            <h2>Uzaktan Geliştirme için Visual C++</h2>
+        </div>
+    
+    <table>
+    <tr>    
+    <div id="main_content">
+        
+        <td>
+        <div id="lpanel">
+            <h1>Uzaktan Geliştirme için projeniz ayarlanıyor</h1>
+
+            <p>Bu iş yükü ile uzak sunucuları, masaüstleri ve cihazlar için C++ kodu yazabilirsiniz. Bu makinelere olan bağlantılarınızı VS içinden yönetebilirsiniz. VS, kaynaklarınızı otomatik olarak kopyalar ve uzaktan oluşturabilir, ayrıca uygulamanızı hata ayıklayıcı ile başlatabilir. Proje sistemimiz ARM dahil belirli mimarileri hedeflemeyi destekler.</p>
+            <img src="images\ArchOptions.gif"/>
+            
+            <h1>Uzak cihaza bağlanılıyor</h1>
+            <h2>Önkoşullar</h2>
+            <p>Şu anda yalnızca hedef makinede uzaktan oluşturma desteklenmektedir. Bazı araçların varlığıyla ilgili bağımlılıklarımız bulunmaktadır. Özellikle openssh-server, g++, gdb ve gdbserver gereklidir. Bunları yüklemek için en sevdiğiniz paket yöneticisini kullanın; örneğin, Debian tabanlı sistemlerde: sudo apt-get install openssh-server g++ gdb gdbserver</p>
+            
+            <h2>İlk bağlantı</h2>
+            <p>İlk kez bir uzak makineyi hedeflediğinizde bağlantı bilgileri istenir.  Bu, proje derlenirken tetiklenir.</p>
+            <img src="images\firstconnection.png"/>
+                
+            <h2>Bağlantı ekleme ve kaldırma</h2>
+            <p>Yeni bir bağlantı eklemek için Araçlar > Seçenekler'e gidin ve Bağlantı seçeneğini arayın. Bağlantı Yöneticisi, Platformlar Arası seçeneğinin altındadır. Buradan, bağlantı ekleyebilir ve kaldırabilirsiniz.</p>
+            <img src="images\ManageConnections.gif"/>
+            
+            <p>Bir projenin kullandığı bağlantıyı değiştirmek için, proje özellikleri genel ayarlarına gidin ve Uzak Derleme Makinesi seçeneğini güncelleştirin.</p>
+            <img src="images\ChangeRemote.gif"/>
+            
+            <h1>Proje Özellikleri</h1>
+            <p>C++ derlemesini denetlemek için gereken tüm seçenekler, proje özellikleri sayfalarında sunulur. Uzak makineler için nasıl çalıştığını öğrenmek üzere bazı belirli noktaları ele alacağız. İlk olarak, genel ayarlar altında uzak kökün varsayılan olarak ~/projects/ şeklinde ayarlandığını ve uzak proje dizinini bu konumdaki proje adıyla eşlenecek şekilde ayarladığımızı görürsünüz.</p>
+            <img src="images\OutputTypes.gif"/>
+            
+            <p>Projenin Genel ayarlarına bakarak, çıkışımızın ve ara dizinlerimizin nasıl yapılandırıldığını görebilirsiniz. Ayrıca, bu proje bir uygulama olarak yapılandırıldığından, yürütülebilir dosyamız ConsoleApplication1.out olarak bin/x64/Debug/ altında yer alır. Yapılandırma türleri için statik ve dinamik kitaplıkları da desteklemekteyiz.</p>
+            
+            <p>Bağlayıcı > Giriş özellik sayfasına ek kitaplık bağımlılıkları ekleyin.</p>
+            <img src="images\linker.png"/>
+            
+            <p>Uzak makinede grafik uygulamaları başlatma gibi işlemleri yapmak için hata ayıklayıcısına ek önceden başlatma komutlarını geçirebilirsiniz.</p>
+            <img src="images\debuggerexport.png"/>
+            
+            <p>Ayrıca, çalıştırılabilir dosyayı süper kullanıcı olarak çalıştırmaya gerek kalmadan, bir GPIO pin'ini dışarı aktaran bu örnekte olduğu gibi, uzak davranışı denetlemek için post build olayları da gönderebilirsiniz.</p>
+            <img src="images\postbuild.png"/>
+            
+        </div>
+        </td>
+        <td>
+        <div id="rpanel">
+
+            <h1>Kaynaklar</h1>
+
+            <p>Güncellemelerin ve kullanımla ilgili daha ayrıntılı bilgilerin sağlandığı <a href="http://aka.ms/vslinux">Linux Geliştirme için VC++ sayfasına</a> göz atın.</p>
+            <h1>Geri bildirim gönderin</h1>
+            <p>Visual Studio'da geri bildirim gönder işlevini kullanın veya <a href=" https://developercommunity.visualstudio.com/">Geliştirici Topluluğu</a> üzerinden bizimle iletişime geçin</p>
+        </div>
+        </td>   
+    </div>
+    </tr>
+    </table>
+    </div>
+</body>
+</html>
