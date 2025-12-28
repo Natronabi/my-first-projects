@@ -1,2 +1,2 @@
-# my-first-projects
+# my-first-project
 Hello world
